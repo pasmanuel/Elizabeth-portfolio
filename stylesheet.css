@@ -55,6 +55,7 @@
     background-color: yellow;
     color:black;
     font-weight: 900;
+    height: 60px;
 }
 
 .pre:hover{
@@ -75,11 +76,11 @@
     /* background-color: rgb(200, 195, 195); */
     height: 70vh;
     background-size: cover;
-    background-position: fixed;
+    /* background-position: fixed; */
     display: flex;
     justify-content: space-around;
     line-height: 3rem;
-   padding-top: 2rem;
+     padding-top: 2rem;
 }
 
 .div1 > h1{
@@ -277,9 +278,7 @@ span{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.container-fluid{
-    display: flex;
-}
+
 .dev{
     height: 9rem;
     width: 18.7rem;
@@ -448,6 +447,12 @@ input{
     
     }
 
+
+    .logo-side{
+      position: relative;
+      left: 6rem;
+    }
+
     .pro{
         /* height: 100px; */
         /* width: 200px; */
@@ -458,28 +463,27 @@ input{
 }
 
 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 740px) {
     
     .main {
-        flex-direction: column;
+        display:grid;
         align-items: center;
-        padding-top: 16rem;
-        padding-bottom: 16rem;
+         padding-top: 5rem;
         
     }
 
     .div1 {
         flex: none;
-        margin-top: -10rem;
+        margin-top: -5rem;
         /* max-width: 400px; */
         text-align: center;
-        margin-right: 2rem;
+        /* margin-right: 2rem; */
         
 
     }
 
     .div1 > h1{
-        color: white;
+        
         font-size: 2rem;
         font-weight: 800;
     }
@@ -491,6 +495,7 @@ input{
 
     .pro {
         /* margin-top: 10px; */
+
         margin-bottom:10px;
         height: 140px;
         width: 140px;
@@ -501,6 +506,11 @@ input{
         transform: none;
         transition: none;
         /* border-radius: 20px 60px 20px; */
+    }
+
+    .main-image{
+        position: relative;
+        left: 70px;
     }
         
     .nav{
@@ -680,12 +690,13 @@ input{
 
         .container-a a{
                 font-size: 20px;
-                padding: 3rem;
+                padding: 2rem;
 
-        }
+        } 
 
         .navbar{
-            padding: 5rem;
+            padding-left: 10rem;
+
         }
 
        .call{
@@ -693,8 +704,11 @@ input{
        }
 
        .container-fluid{
-        padding-right: 4rem;
-        padding-left: 4rem;
+        display: flex;
+        position: relative;
+        left: 2rem;
+        /* padding-right: 2rem; */
+        /* padding-left: rem; */
        }
 
         /* .button{
@@ -721,4 +735,34 @@ input{
     color: white;
     border-radius: 3rem;
     
+}
+
+@media(max-width: 768px) {
+    
+.pre{
+    padding: 0.3rem;
+    padding-bottom: 3rem;
+    margin: 1rem;
+    background-color: yellow;
+    color:black;
+    font-weight: 900;
+    height: 40px;
+    font-size: 0.8rem;
+
+}
+}
+
+@media screen and(max-width:463px) {
+    .container-a a{
+        font-size: 20px;
+        padding: 2rem;
+
+}
+
+/* .main {
+    display:grid;
+    align-items: center;
+     padding-top: 20rem; 
+    
+} */
 }
