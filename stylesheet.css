@@ -10,6 +10,11 @@
     background-color:white;
 }
 
+.container-fluid {
+    display: flex;
+    align-items: center;
+}
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -21,6 +26,14 @@
     position: sticky;
     top: 0;
     
+}
+.logo-head{
+    font-size: 1rem;
+}
+
+.logo-side{
+    display: flex;
+    align-items: center;
 }
 
 .ul{
@@ -61,6 +74,8 @@
     background-image: url("./images/clouds.jpg");
     /* background-color: rgb(200, 195, 195); */
     height: 70vh;
+    background-size: cover;
+    background-position: fixed;
     display: flex;
     justify-content: space-around;
     line-height: 3rem;
@@ -262,6 +277,9 @@ span{
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.container-fluid{
+    display: flex;
+}
 .dev{
     height: 9rem;
     width: 18.7rem;
@@ -304,10 +322,20 @@ span{
     margin-left: 3rem;
 }
 
+
+.navbar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+
+
 .contact{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     margin-top: 2rem;
     background-color: black;
     padding-top: 2rem;
@@ -383,26 +411,28 @@ input{
     text-decoration: none;
  }
 
- @media (max-width: 900px) {
+ @media (max-width: 768px) {
     .header{
-        flex-direction: row;
+        display: flex;
         align-items: flex-start;
         height: 90px; 
         align-items: center;
+        min-width: 10p?x;
+        margin;
     }
     
     .ul{
         flex-direction: row;
         gap: 0.5rem;
         font-weight: 600;
-        margin-left:-7.9rem;
+        /* margin-left:-7.9rem; */
     }
 
     .ul > a{
         text-decoration: none;
         list-style: none;
         color: white;
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding-top: 0; 
         font-weight:0.5rem;
         align-items: center;
@@ -412,9 +442,10 @@ input{
 }
     
     .logo{
-        height: 4rem;
-        width: 4rem;
+        height: 40px;
+        width: 40px;
         border-radius: 50%;
+    
     }
 
     .pro{
@@ -427,20 +458,35 @@ input{
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 786px) {
     
     .main {
         flex-direction: column;
         align-items: center;
         padding-top: 16rem;
         padding-bottom: 16rem;
+        
     }
 
     .div1 {
         flex: none;
-        width: 100%;
+        margin-top: -10rem;
+        /* max-width: 400px; */
         text-align: center;
-        padding-top:50px;
+        margin-right: 2rem;
+        
+
+    }
+
+    .div1 > h1{
+        color: white;
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    .div1 > h2{
+        color: orange;
+        font-size: 2rem;
     }
 
     .pro {
@@ -455,12 +501,11 @@ input{
         transform: none;
         transition: none;
         /* border-radius: 20px 60px 20px; */
-    
+    }
         
     .nav{
     display: flex;
     align-items: center;
-    margin-top: rem;
 
 
 } 
@@ -470,7 +515,7 @@ input{
 
 
 /* Media query for smaller screens - About Me section */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 786px) {
     .section{
         margin-top: 0;
     }
@@ -491,6 +536,13 @@ input{
         text-align: center;
     }
 
+    .div-about > p{
+        color: white;
+        font-size: 30px;
+        margin-left: 5rem;
+    }
+    
+
     .info {
         margin-top: 20px;
         text-align: center;
@@ -499,7 +551,7 @@ input{
 
 
 /* Media query for smaller screens - Skills and Services sections */
-@media screen and (max-width:900px) {
+@media screen and (max-width:786px) {
     #Skills,
     #Services {
         padding: 20px;
@@ -510,6 +562,8 @@ input{
         
     }
 
+
+    
     .container-skills,
     .Services-div {
         display: flex;
@@ -549,23 +603,21 @@ input{
 
 
     .contact{
-        display: flex;
+        display: block;
         justify-content: center;
         align-items: center;
         padding: -10rem;
-        margin-top: 2rem;
+        /* margin: 5rem; */
         background-color: black;
         padding-top: 3rem;
         gap: 2rem;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         border-top-right-radius: 20% -30% ;
         border-top-left-radius: 20% 20%;
-        margin-left: 1rem;
         /* padding-left: 6rem; */
-        margin-left: 1rem;
-        height: 23rem;
-        width: 28rem;
-        margin-left: 2rem;
+        /* margin-left: 1rem; */
+        height: auto;
+        max-width: 300px;
         line-height: 2rem;
     }
 
@@ -576,11 +628,12 @@ input{
             display: flex; 
             flex-direction:column;
             padding-left: 3rem;
-            margin-left: -2rem;
+            margin-left: 1rem;
         }
 
         .form{
-            margin: 0;
+            margin-left: 1rem;
+
         }
 
         .ta{
@@ -589,17 +642,14 @@ input{
             /* margin-top: 0.6rem; */
         }
 
-        .yn{
+        .yn , .ye{
             height: 2rem;
-            width:6rem ;
+            width:100%;
             margin-top: 0.6rem;
+            /* padding-right: 2rem; */
         }
 
-        .ye{
-            width: 6rem;
-            margin-top: 0rem;
-        }
-           
+        
         /* .ui{
             height: 17rem;
             width: 19rem;
@@ -628,14 +678,33 @@ input{
             transition: all 1s ease-in-out;
         }
 
-        .button{
+        .container-a a{
+                font-size: 20px;
+                padding: 3rem;
+
+        }
+
+        .navbar{
+            padding: 5rem;
+        }
+
+       .call{
+        padding-left: 3rem;
+       }
+
+       .container-fluid{
+        padding-right: 4rem;
+        padding-left: 4rem;
+       }
+
+        /* .button{
             background-color: orange;
             padding: 0.2rem;
             font-size: 0.8rem;
             color: white;
             border-radius: 5rem;
             
-        }
+        } */
 
         .button1{
             font-size: 0.8rem;
